@@ -6,8 +6,9 @@
   <packaging>pom</packaging>
   <name>Demo_Junit_Parent</name>
   <modules>
-  	<module>../Demo_Junit_EAR</module>
   	<module>../Demo_Junit_EJB</module>
   	<module>../Demo_Junit_JSF</module>
+  	<module>../Demo_Junit_EAR</module>
   </modules>
+  	
 </project>
