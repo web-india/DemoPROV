@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Demo_Junit_Parent</groupId>
+  <artifactId>Demo_Junit_Parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Demo_Junit_Parent</name>
+  <modules>
+  	<module>../Demo_Junit_EAR</module>
+  	<module>../Demo_Junit_EJB</module>
+  	<module>../Demo_Junit_JSF</module>
+  </modules>
+</project>
