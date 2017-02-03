@@ -4,6 +4,12 @@
   <artifactId>Demo_Junit_EAR</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>ear</packaging>
+  <parent>
+  	<groupId>Demo_Junit_Parent</groupId>
+  	<artifactId>Demo_Junit_Parent</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../Demo_Junit_Parent/pom.xml</relativePath>
+  </parent>
   <dependencies>
   <dependency>
       <groupId>Demo_Junit_EJB</groupId>
@@ -29,12 +35,28 @@
           <defaultLibBundleDir>lib</defaultLibBundleDir>
         </configuration>
       </plugin>
+      <plugin>
+  <groupId>org.wildfly.plugins</groupId>
+  <artifactId>wildfly-maven-plugin</artifactId>
+  <version>1.1.0.Alpha10</version>
+  <executions>
+    <execution>
+      <phase>install</phase>
+      <goals>
+        <goal>redeploy</goal>
+      </goals>
+    </execution>
+  </executions>
+  <configuration>
+    <force>true</force>
+    <hostname>${hostname}</hostname>
+    <port>${port}</port>
+    <username>${username}</username>
+    <password>${password}</password>
+    <filename>${filename}</filename>
+  </configuration>
+</plugin>
     </plugins>
   </build>
-  <parent>
-  	<groupId>Demo_Junit_Parent</groupId>
-  	<artifactId>Demo_Junit_Parent</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<relativePath>../Demo_Junit_Parent/pom.xml</relativePath>
-  </parent>
+  
 </project>
